@@ -331,7 +331,7 @@ static const argument_t argument_mapping[] =
     { "--", "--max_ht",      MAX_HT,
         "Maximum height (Default: 1600)\n" },
     { "--",  "--arch", ARCH,
-        "Set Architecture. Supported values  ARM_NONEON, ARM_A9Q, ARM_A7, ARM_A5, ARM_NEONINTR, X86_GENERIC, X86_SSSE3, X86_SSE4 \n" },
+        "Set Architecture. Supported values  ARM_NONEON, ARM_A9Q, ARM_A7, ARM_A5, ARM_NEONINTR, X86_GENERIC, X86_SSSE3, X86_SSE4, MIPS_MSA\n" },
     { "--",  "--soc", SOC,
         "Set SOC. Supported values  GENERIC, HISI_37X \n" },
 
@@ -1291,6 +1291,8 @@ void parse_argument(vid_dec_ctx_t *ps_app_ctx, CHAR *argument, CHAR *value)
                 ps_app_ctx->e_arch = ARCH_MIPS_GENERIC;
             else if((strcmp(value, "MIPS_32")) == 0)
                 ps_app_ctx->e_arch = ARCH_MIPS_32;
+            else if((strcmp(value, "MIPS_MSA")) == 0)
+                ps_app_ctx->e_arch = ARCH_MIPS_MSA;
             else
             {
                 printf("\nInvalid Arch. Setting it to ARM_A9Q\n");
