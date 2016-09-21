@@ -31,11 +31,15 @@ pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_sse42;
 
 pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_av8;
 
+pf_memset0_one_16bit_buf_t impeg2_memset0_16bit_8x8_linear_block_msa;
+
 pf_memset_8bit_t impeg2_memset_8bit_8x8_block;
 pf_memset_8bit_t impeg2_memset_8bit_8x8_block_a9q;
 
 pf_memset_8bit_t impeg2_memset_8bit_8x8_block_sse42;
 
 pf_memset_8bit_t impeg2_memset_8bit_8x8_block_av8;
+
+pf_memset_8bit_t impeg2_memset_8bit_8x8_block_msa;
 
 #endif /* IMPEG2_MEM_FUNC_H_ */

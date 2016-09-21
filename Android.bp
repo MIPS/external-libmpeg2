@@ -135,6 +135,28 @@ cc_library_static {
                 "decoder/mips/impeg2d_function_selector.c",
                 "common/mips/ideint_function_selector.c",
             ],
+
+            cflags: [
+                "-DDISABLE_MSA",
+                "-DDEFAULT_ARCH=D_ARCH_MIPS_NOMSA",
+            ],
+
+            msa: {
+                srcs: [
+                    "decoder/mips/impeg2d_function_selector_msa.c",
+                    "decoder/mips/impeg2d_mc_msa.c",
+                    "common/mips/impeg2_format_conv_msa.c",
+                    "common/mips/impeg2_idct_msa.c",
+                    "common/mips/impeg2_inter_pred_msa.c",
+                    "common/mips/impeg2_mem_func_msa.c",
+                ],
+
+                cflags: [
+                    "-UDISABLE_MSA",
+                    "-UDEFAULT_ARCH",
+                    "-DDEFAULT_ARCH=D_ARCH_MIPS_MSA",
+                ],
+            },
         },
 
         mips64: {
@@ -144,6 +166,28 @@ cc_library_static {
                 "decoder/mips/impeg2d_function_selector.c",
                 "common/mips/ideint_function_selector.c",
             ],
+
+            cflags: [
+                "-DDISABLE_MSA",
+                "-DDEFAULT_ARCH=D_ARCH_MIPS_NOMSA",
+            ],
+
+            msa: {
+                srcs: [
+                    "decoder/mips/impeg2d_function_selector_msa.c",
+                    "decoder/mips/impeg2d_mc_msa.c",
+                    "common/mips/impeg2_format_conv_msa.c",
+                    "common/mips/impeg2_idct_msa.c",
+                    "common/mips/impeg2_inter_pred_msa.c",
+                    "common/mips/impeg2_mem_func_msa.c",
+                ],
+
+                cflags: [
+                    "-UDISABLE_MSA",
+                    "-UDEFAULT_ARCH",
+                    "-DDEFAULT_ARCH=D_ARCH_MIPS_MSA",
+                ],
+            },
         },
 
         x86: {
