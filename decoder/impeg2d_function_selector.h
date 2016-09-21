@@ -56,6 +56,7 @@
 #define D_ARCH_X86_AVX2             14
 #define D_ARCH_MIPS_GENERIC         15
 #define D_ARCH_MIPS_32              16
+#define D_ARCH_MIPS_MSA             17
 
 void impeg2d_init_arch(void *ps_codec);
 
@@ -71,5 +72,7 @@ void impeg2d_init_function_ptr_avx2(void *ps_codec);
 
 void impeg2d_init_function_ptr_a9q(void *ps_codec);
 void impeg2d_init_function_ptr_av8(void *ps_codec);
+
+void impeg2d_init_function_ptr_msa(void *ps_codec);
 
 #endif /* _IMPEG2D_FUNCTION_SELECTOR_H_ */

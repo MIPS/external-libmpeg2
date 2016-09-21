@@ -103,4 +103,12 @@ pf_interpred_t impeg2_mc_halfx_fully_8x8_sse42;
 pf_interpred_t impeg2_mc_fullx_halfy_8x8_sse42;
 pf_interpred_t impeg2_mc_fullx_fully_8x8_sse42;
 
+/* MSA Declarations */
+pf_copy_mb_t impeg2_copy_mb_msa;
+pf_interpolate_t impeg2_interpolate_msa;
+pf_interpred_t impeg2_mc_halfx_halfy_8x8_msa;
+pf_interpred_t impeg2_mc_halfx_fully_8x8_msa;
+pf_interpred_t impeg2_mc_fullx_halfy_8x8_msa;
+pf_interpred_t impeg2_mc_fullx_fully_8x8_msa;
+
 #endif /* #ifndef __IMPEG2_INTER_PRED_H__  */
