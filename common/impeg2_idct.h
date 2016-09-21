@@ -62,5 +62,12 @@ pf_idct_recon_t impeg2_idct_recon_dc_mismatch_sse42;
 
 pf_idct_recon_t impeg2_idct_recon_dc_sse42;
 
+
+pf_idct_recon_t impeg2_idct_recon_dc_msa;
+
+pf_idct_recon_t impeg2_idct_recon_dc_mismatch_msa;
+
+pf_idct_recon_t impeg2_idct_recon_msa;
+
 #endif /* #ifndef __IMPEG2_IDCT_H__ */
 

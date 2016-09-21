@@ -74,5 +74,9 @@ pf_mc_t impeg2d_mc_halfx_fully;
 pf_mc_t impeg2d_mc_fullx_halfy;
 pf_mc_t impeg2d_mc_fullx_fully;
 
+pf_mc_t impeg2d_mc_halfx_halfy_msa;
+pf_mc_t impeg2d_mc_halfx_fully_msa;
+pf_mc_t impeg2d_mc_fullx_halfy_msa;
+pf_mc_t impeg2d_mc_fullx_fully_msa;
 
 #endif /* __IMPEG2D_MC_H__*/
