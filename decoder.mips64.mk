@@ -4,7 +4,6 @@ libmpeg2d_srcs_c_mips64     +=  decoder/mips/impeg2d_function_selector.c
 libmpeg2d_srcs_c_mips64     +=  common/mips/ideint_function_selector.c
 
 ifeq ($(ARCH_MIPS_HAS_MSA),true)
-libmpeg2d_cflags_mips64     += -mfp64 -mmsa
 libmpeg2d_cflags_mips64     += -DDEFAULT_ARCH=D_ARCH_MIPS_MSA
 
 libmpeg2d_srcs_c_mips64     +=  decoder/mips/impeg2d_function_selector_msa.c
